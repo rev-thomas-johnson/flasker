@@ -11,7 +11,7 @@ app = Flask(__name__)
 def index():
 	first_name = "John"
 	stuff = "This is <strong>Bold</strong> text."
-	fav_pizzas = ["Pepporoni", "Sausuage", "Cheese", 41]
+	fav_pizzas = ["Pepporoni", "Sausage", "Cheese", 41]
 	return render_template("index.html", first_name=first_name,
 		stuff=stuff, fav_pizzas=fav_pizzas)
 
@@ -35,3 +35,11 @@ def page_not_found(e):
 	return render_template("500.html"), 500
 
 
+# Filters
+# safe - removes tags and uses them
+# capitalize
+# lower
+# upper
+# title
+# trim - removes trailing whitespace
+# striptags - removes tags without using them
